@@ -245,4 +245,7 @@ public class Settings extends SettingsActivity {
      */
     public static class PixelizerActivity extends SettingsActivity {}
 
+    // LiveDisplay
+    public static class LiveDisplaySettingsActivity extends SettingsActivity { /* empty */ }
+
 }
