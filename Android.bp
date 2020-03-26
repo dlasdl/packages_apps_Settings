@@ -54,6 +54,7 @@ android_library {
         "statslog-settings",
         "zxing-core-1.7",
         "airbnb-lottie",
+        "faceunlock_utils",
         "android.hardware.dumpstate-V1.0-java",
         "android.hardware.dumpstate-V1.1-java",
         "VendorSupport-preference",
