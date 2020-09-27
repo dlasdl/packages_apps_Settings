@@ -813,4 +813,10 @@
         <item name="android:lineSpacingMultiplier">1.3</item>
         <item name="android:fontFamily">sans-serif-book</item>
     </style>
+
+    <style name="BatteryEntityHeader">
+        <item name="android:background">?android:attr/colorPrimary</item>
+        <item name="android:paddingTop">4dp</item>
+    </style>
+
 </resources>
