@@ -27,6 +27,12 @@
         android:layout="@layout/ppui_logo"
         android:selectable="false"/>
 
+    <!-- PixelPlusUI info -->
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="ppui_info"
+        android:layout="@layout/ppui_info"
+        android:selectable="false" />
+
     <!-- PPUI version -->
     <Preference
         android:key="ppui_version"
