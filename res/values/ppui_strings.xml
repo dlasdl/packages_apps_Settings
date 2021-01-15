@@ -20,7 +20,7 @@
 
     <!-- PixelPlusUI versioning -->
     <string name="ppui_version_title">Version</string>
-    <string name="ppui_version_code_title">Codename</string>
+    <string name="ppui_device_title">Device</string>
     <string name="ppui_release_type_title">Release type</string>
     <string name="ppui_maintainer_title">Maintainer</string>
 

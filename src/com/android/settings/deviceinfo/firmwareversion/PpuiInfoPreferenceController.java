@@ -17,6 +17,7 @@
 package com.android.settings.deviceinfo.firmwareversion;
 
 import android.content.Context;
+import android.os.Build;
 import android.os.SystemProperties;
 import android.widget.TextView;
 
@@ -34,9 +35,35 @@ public class PpuiInfoPreferenceController extends AbstractPreferenceController {
     private static final String PROP_PPUI_VERSION_CODE = "ro.ppui.version_code";
     private static final String PROP_PPUI_RELEASETYPE = "ro.ppui.releasetype";
     private static final String PROP_PPUI_MAINTAINER = "ro.ppui.maintainer";
+    private static final String PROP_PPUI_DEVICE = "ro.ppui.device_name";
 
     public PpuiInfoPreferenceController(Context context) {
         super(context);
+    }
+
+    private String getDeviceName() {
+        String device = SystemProperties.get(PROP_PPUI_DEVICE, "");
+        if (device.equals("")) {
+            device = Build.MANUFACTURER + " " + Build.MODEL;
+        }
+        return device;
+    }
+
+    private String getPpuiVersion() {
+        final String version = SystemProperties.get(PROP_PPUI_VERSION,
+                this.mContext.getString(R.string.device_info_default));
+        final String versionCode = SystemProperties.get(PROP_PPUI_VERSION_CODE,
+                this.mContext.getString(R.string.device_info_default));
+
+        return version + " | " + versionCode;
+    }
+
+    private String getPpuiReleaseType() {
+        final String releaseType = SystemProperties.get(PROP_PPUI_RELEASETYPE,
+                this.mContext.getString(R.string.device_info_default));
+
+        return releaseType.substring(0, 1).toUpperCase() +
+                 releaseType.substring(1).toLowerCase();
     }
 
     @Override
@@ -44,19 +71,16 @@ public class PpuiInfoPreferenceController extends AbstractPreferenceController {
         super.displayPreference(screen);
         final LayoutPreference PpuiInfoPreference = screen.findPreference(KEY_PPUI_INFO);
         final TextView version = (TextView) PpuiInfoPreference.findViewById(R.id.version_message);
-        final TextView versionCode = (TextView) PpuiInfoPreference.findViewById(R.id.version_code_message);
+        final TextView device = (TextView) PpuiInfoPreference.findViewById(R.id.device_message);
         final TextView releaseType = (TextView) PpuiInfoPreference.findViewById(R.id.release_type_message);
         final TextView maintainer = (TextView) PpuiInfoPreference.findViewById(R.id.maintainer_message);
-        final String PpuiVersion = SystemProperties.get(PROP_PPUI_VERSION,
-                this.mContext.getString(R.string.device_info_default));
-        final String PpuiVersionCode = SystemProperties.get(PROP_PPUI_VERSION_CODE,
-                this.mContext.getString(R.string.device_info_default));
-        final String PpuiReleaseTypen = SystemProperties.get(PROP_PPUI_RELEASETYPE,
-                this.mContext.getString(R.string.device_info_default));
+        final String ppuiVersion = getPpuiVersion();
+        final String ppuiDevice = getDeviceName();
+        final String ppuiReleaseType = getPpuiReleaseType();
         final String PpuiMaintainer = SystemProperties.get(PROP_PPUI_MAINTAINER,
                 this.mContext.getString(R.string.device_info_default));
         version.setText(ppuiVersion);
-        versionCode.setText(PpuiVersionCode);
+        device.setText(ppuiDevice);
         releaseType.setText(PpuiReleaseType);
         maintainer.setText(ppuiMaintainer);
     }
