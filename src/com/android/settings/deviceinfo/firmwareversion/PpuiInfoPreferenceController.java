@@ -33,8 +33,8 @@ public class PpuiInfoPreferenceController extends AbstractPreferenceController {
 
     private static final String PROP_PPUI_VERSION = "ro.ppui.version";
     private static final String PROP_PPUI_VERSION_CODE = "ro.ppui.version_code";
-    private static final String PROP_PPUI_RELEASETYPE = "ro.ppui.releasetype";
-    private static final String PROP_PPUI_MAINTAINER = "ro.ppui.maintainer";
+    private static final String PROP_PPUI_OFFICIAL = "ro.ppui.is_official";
+    private static final String PROP_PPUI_MAINTAINER = "ro.ppui.maintainer_name";
     private static final String PROP_PPUI_DEVICE = "ro.ppui.device_name";
 
     public PpuiInfoPreferenceController(Context context) {
@@ -58,31 +58,22 @@ public class PpuiInfoPreferenceController extends AbstractPreferenceController {
         return version + " | " + versionCode;
     }
 
-    private String getPpuiReleaseType() {
-        final String releaseType = SystemProperties.get(PROP_PPUI_RELEASETYPE,
-                this.mContext.getString(R.string.device_info_default));
-
-        return releaseType.substring(0, 1).toUpperCase() +
-                 releaseType.substring(1).toLowerCase();
-    }
-
     @Override
     public void displayPreference(PreferenceScreen screen) {
         super.displayPreference(screen);
         final LayoutPreference PpuiInfoPreference = screen.findPreference(KEY_PPUI_INFO);
         final TextView version = (TextView) PpuiInfoPreference.findViewById(R.id.version_message);
         final TextView device = (TextView) PpuiInfoPreference.findViewById(R.id.device_message);
-        final TextView releaseType = (TextView) PpuiInfoPreference.findViewById(R.id.release_type_message);
         final TextView maintainer = (TextView) PpuiInfoPreference.findViewById(R.id.maintainer_message);
+        final TextView releaseType = (TextView) PpuiInfoPreference.findViewById(R.id.release_type_message);
         final String ppuiVersion = getPpuiVersion();
         final String ppuiDevice = getDeviceName();
-        final String ppuiReleaseType = getPpuiReleaseType();
-        final String PpuiMaintainer = SystemProperties.get(PROP_PPUI_MAINTAINER,
-                this.mContext.getString(R.string.device_info_default));
+        final String ppuiMaintainer = SystemProperties.get(PROP_PPUI_MAINTAINER, this.mContext.getString(R.string.device_info_default));
+        final String ppuiReleaseType = SystemProperties.getBoolean(PROP_PPUI_OFFICIAL, false) ? "OFFICIAL" : "UNOFFICIAL";
         version.setText(ppuiVersion);
         device.setText(ppuiDevice);
-        releaseType.setText(PpuiReleaseType);
         maintainer.setText(ppuiMaintainer);
+        releaseType.setText(ppuiReleaseType);
     }
 
     @Override
