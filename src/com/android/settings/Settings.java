@@ -240,4 +240,9 @@ public class Settings extends SettingsActivity {
      */
     public static class MediaControlsSettingsActivity extends SettingsActivity {}
 
+    /**
+     * Pixelizer activities
+     */
+    public static class PixelizerActivity extends SettingsActivity {}
+
 }
