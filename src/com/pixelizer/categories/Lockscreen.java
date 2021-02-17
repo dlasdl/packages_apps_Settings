@@ -35,15 +35,15 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.Utils;
 
-public class Navigation extends SettingsPreferenceFragment implements Preference.OnPreferenceChangeListener {
+public class Lockscreen extends SettingsPreferenceFragment implements Preference.OnPreferenceChangeListener {
 
-    public static final String TAG = "Navigation";
+    public static final String TAG = "Lockscreen";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.customisation_navigation);
+        addPreferencesFromResource(R.xml.customisation_lockscreen);
         setRetainInstance(true);
 
         ContentResolver resolver = getActivity().getContentResolver();

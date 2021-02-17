@@ -46,7 +46,7 @@ import com.android.settings.R;
 import com.pixelizer.categories.Themes;
 import com.pixelizer.categories.StatusBar;
 import com.pixelizer.categories.QS;
-import com.pixelizer.categories.Navigation;
+import com.pixelizer.categories.Lockscreen;
 import com.pixelizer.categories.Extras;
 
 public class Pixelizer extends SettingsPreferenceFragment {
@@ -72,8 +72,8 @@ public class Pixelizer extends SettingsPreferenceFragment {
                     } else if (item.getItemId() == R.id.navigation_qs) {
                         switchFragment(new QS());
 
-                    } else if (item.getItemId() == R.id.navigation_navigation) {
-                        switchFragment(new Navigation());
+                    } else if (item.getItemId() == R.id.navigation_lockscreen) {
+                        switchFragment(new Lockscreen());
 
                     } else if (item.getItemId() == R.id.navigation_extras) {
                         switchFragment(new Extras());
