@@ -43,7 +43,6 @@ import androidx.preference.PreferenceScreen;
 
 import com.android.settings.R;
 
-import com.pixelizer.categories.Themes;
 import com.pixelizer.categories.StatusBar;
 import com.pixelizer.categories.QS;
 import com.pixelizer.categories.Lockscreen;
@@ -63,10 +62,7 @@ public class Pixelizer extends SettingsPreferenceFragment {
                 if (item.getItemId() == bottomNavigation.getSelectedItemId()) {
                     return false;
                 } else {
-                    if (item.getItemId() == R.id.navigation_themes) {
-                        switchFragment(new Themes());
-
-                    } else if (item.getItemId() == R.id.navigation_statusbar) {
+                    if (item.getItemId() == R.id.navigation_statusbar) {
                         switchFragment(new StatusBar());
 
                     } else if (item.getItemId() == R.id.navigation_qs) {
@@ -84,8 +80,8 @@ public class Pixelizer extends SettingsPreferenceFragment {
         });
 
         setHasOptionsMenu(true);
-        bottomNavigation.setSelectedItemId(R.id.navigation_themes);
-        switchFragment(new Themes());
+        bottomNavigation.setSelectedItemId(R.id.navigation_qs);
+        switchFragment(new QS());
         return view;
     }
 

@@ -13,12 +13,6 @@
 -->
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item
-        android:id="@+id/navigation_themes"
-        android:icon="@drawable/ic_pixelizer_themes"
-        android:title="@string/customisation_themes" />
-
     <item
         android:id="@+id/navigation_statusbar"
         android:icon="@drawable/ic_pixelizer_statusbar"
