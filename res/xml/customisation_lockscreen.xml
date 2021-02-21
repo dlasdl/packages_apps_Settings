@@ -16,4 +16,11 @@
      xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
      android:title="@string/customisation_lockscreen" >
 
+     <com.pixelizer.preference.SystemSettingSwitchPreference
+        android:key="fp_unlock_keystore"
+        android:title="@string/fp_unlock_keystore_title"
+        android:summary="@string/fp_unlock_keystore_summary"
+        android:icon="@drawable/fp"
+        android:defaultValue="false" />
+
 </PreferenceScreen>

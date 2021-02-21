@@ -42,4 +42,8 @@
     <string name="network_traffic_state_title">Show net speed in statusbar</string>
     <string name="network_traffic_autohide_threshold_title">Net speed autohide threshold (KB/s)</string>
     <string name="network_traffic_notch_info">Devices with notch may show the indicator only when the status bar is expanded, depending on the size of the notch and available space in status bar</string>
+
+    <!-- Fingerprint unlock -->
+    <string name="fp_unlock_keystore_title">Force FP authentication</string>
+    <string name="fp_unlock_keystore_summary">Unlock device with fingerprint after reboot or lockdown</string>
 </resources>
