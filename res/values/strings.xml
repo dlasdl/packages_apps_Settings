@@ -46,4 +46,9 @@
     <!-- Fingerprint unlock -->
     <string name="fp_unlock_keystore_title">Force FP authentication</string>
     <string name="fp_unlock_keystore_summary">Unlock device with fingerprint after reboot or lockdown</string>
+
+    <!-- Double Tap Statusbar to Sleep -->
+    <string name="statusbar_gesture_title">Gestures</string>
+    <string name="double_tap_to_sleep_statusbar_title">Double tap to sleep</string>
+    <string name="double_tap_to_sleep_statusbar_summary">Double tap on statusbar to put the device to sleep</string>
 </resources>
