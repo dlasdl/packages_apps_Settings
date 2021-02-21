@@ -31,9 +31,4 @@
         android:title="@string/powermenu_lockdown"
         android:defaultValue="false" />
 
-    <com.pixelizer.preference.SystemSettingSwitchPreference
-        android:key="powermenu_screenshot"
-        android:title="@string/powermenu_screenshot_title"
-        android:defaultValue="false" />
-
 </PreferenceScreen>
