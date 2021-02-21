@@ -25,7 +25,6 @@
     <string name="customisation_extras">Extras</string>
 
     <!-- Power Menu -->
-    <string name="hardware_keys_power_category">Power Button</string>
     <string name="powermenu_title">Power Menu</string>
     <string name="powermenu_summary">Customize elements to be displayed in power menu</string>
     <string name="powermenu_reboot_title">Reboot</string>

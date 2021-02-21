@@ -14,10 +14,12 @@
  * limitations under the License.
  */
 
-package me.waveproject.framework.preference;
+package com.pixelizer.preference;
 
 import android.content.Context;
 import android.util.AttributeSet;
+
+import com.pixelizer.preference.CustomSeekBarPreference;
 
 public class CustomSystemSeekBarPreference extends CustomSeekBarPreference {
 
