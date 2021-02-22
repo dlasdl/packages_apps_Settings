@@ -30,7 +30,7 @@ android_library {
     srcs: ["src/**/*.java"],
 
     resource_dirs: ["res",
-                    "TouchGestures/res"
+                    "res"
     ],
 
     static_libs: [
