@@ -13,6 +13,6 @@
 <resources>
 
     <!-- Pixelizer homepage icon -->
-    <color name="homepage_pixelizer_background">?android:attr/colorAccent</color>
+    <color name="homepage_pixelizer_background">#1F2F80EC</color>
 
 </resources>
