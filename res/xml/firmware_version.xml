@@ -21,12 +21,6 @@
     android:title="@string/firmware_version"
     settings:keywords="@string/keywords_android_version">
 
-    <!-- PPUI logo -->
-    <com.android.settingslib.widget.LayoutPreference
-        android:key="ppui_logo"
-        android:layout="@layout/ppui_logo"
-        android:selectable="false"/>
-
     <!-- PixelPlusUI info -->
     <com.android.settingslib.widget.LayoutPreference
         android:key="ppui_info"
