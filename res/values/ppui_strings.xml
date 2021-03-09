@@ -15,9 +15,6 @@
     <string name="ppui_version">"PixelPlusUI version"</string>
     <string name="build_date">"Build Time"</string>
 
-    <!-- About Phone screen, Device Codename -->
-    <string name="about_device_name">Device</string>
-
     <!-- PixelPlusUI versioning -->
     <string name="ppui_version_title">Version</string>
     <string name="ppui_device_title">Device</string>
