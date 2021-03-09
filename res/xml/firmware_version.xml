@@ -27,14 +27,6 @@
         android:layout="@layout/ppui_info"
         android:selectable="false" />
 
-    <!-- PPUI version -->
-    <Preference
-        android:key="ppui_version"
-        android:title="@string/ppui_version"
-        android:summary="@string/summary_placeholder"
-        settings:enableCopying="true"
-        settings:controller="com.android.settings.deviceinfo.firmwareversion.PPUIVersionDetailPreferenceController"/>
-
     <!-- Android version -->
     <Preference
         android:key="os_firmware_version"
